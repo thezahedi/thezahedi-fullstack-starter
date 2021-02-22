@@ -1,0 +1,13 @@
+@import "fonts.css";
+
+* {
+    @apply font-dana;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
