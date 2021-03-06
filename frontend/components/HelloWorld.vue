@@ -1,15 +1,19 @@
 <template>
     <div>
-        {{ hello }}
+        {{ helloWorld }}
     </div>
 </template>
 
 <script>
 export default {
+    created() {
+        this.$store.commit("SET_HELLO_WORLD", this.$t('helloWorld'));
+    },
+
     computed: {
-        hello() {
+        helloWorld() {
             return this.$store.getters["hello"];
         }
-    }
+    },
 }
 </script>

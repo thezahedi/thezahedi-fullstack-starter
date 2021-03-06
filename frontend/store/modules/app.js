@@ -1,11 +1,17 @@
 export default {
     state: {
-        hello: "سلام جهان!",
+        hello: "",
     },
 
     getters: {
         hello(state) {
             return state.hello;
+        }
+    },
+
+    mutations: {
+        SET_HELLO_WORLD(state, data) {
+            state.hello = data;
         }
     },
 };
