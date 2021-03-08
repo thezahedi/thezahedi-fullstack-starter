@@ -12,7 +12,21 @@ module.exports = {
         }
     },
     variants: {
-        extend: {},
+        extend: {
+            float: ['direction'],
+            clear: ['direction'],
+            objectPosition: ['direction'],
+            inset: ['direction'],
+            padding: ['direction'],
+            margin: ['direction'],
+            textAlign: ['direction'],
+            backgroundPosition: ['direction'],
+            backgroundImage: ['direction'],
+            borderRadius: ['direction'],
+            borderWidth: ['direction'],
+        },
     },
-    plugins: [],
+    plugins: [
+        require('tailwindcss-dir')()
+    ],
 }

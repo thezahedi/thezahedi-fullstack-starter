@@ -1,21 +1,9 @@
 <template>
-    <div :class="{'rtl': dir !== 'en'}">
+    <div dir="ltr"> <!-- Configure this value to execute ltr or rtl variants of tailwindcss-dir -->
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            dir: "en",
-        }
-    },
-
-    watch: {
-        "$root.$i18n.locale": (newValue) => {
-            localStorage.setItem('thezahedi-dir', newValue === "fa" ? "rtl" : "ltr");
-        }
-    }
-}
+export default {}
 </script>
